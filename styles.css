@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+
+  --light-orange: hsl(15, 100%, 70%);
+  --soft-blue: hsl(195, 74%, 62%);
+  --light-red: hsl(348, 100%, 68%);
+  --lime-green: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --violet-lighter: hsl(250, 52%, 52%);
+  --soft-orange: hsl(43, 84%, 65%);
+
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --dark-blue-lighter: hsl(235, 46%, 30%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+.work {
+  background-color: var(--light-orange);
+  background-image: url('/images/icon-work.svg');
+}
+.play {
+  background-color: var(--soft-blue);
+  background-image: url('/images/icon-play.svg');
+}
+.study {
+  background-color: var(--light-red);
+  background-image: url('/images/icon-study.svg');
+}
+.exercise {
+  background-color: var(--lime-green);
+  background-image: url('/images/icon-exercise.svg');
+}
+.social {
+  background-color: var(--violet);
+  background-image: url('/images/icon-social.svg');
+}
+.self-care {
+  background-color: var(--soft-orange);
+  background-image: url('/images/icon-self-care.svg');
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  background: var(--very-dark-blue);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  width: 80%;
+}
+
+.report-card {
+  grid-area: 1 / 1 / 3 / 2;
+  border-radius: 10px;
+  background-color: var(--dark-blue);
+  padding-bottom: 20px;
+  color: var(--pale-blue);
+  height: calc(100% - 30px);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--violet-lighter);
+  height: 210px;
+}
+
+.top h2 {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  opacity: 70%;
+}
+.top h1 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+img {
+  width: 40%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--desaturated-blue);
+  text-align: left;
+  padding-left: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.card2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.stat-card {
+  color: var(--pale-blue);
+}
+
+.head {
+  height: 40px;
+  background-position: top right;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: calc(100% + 5px);
+  border-radius: 10px 10px 0 0;
+}
+
+.content {
+  background: var(--dark-blue);
+  border-radius: 10px;
+  transform: translateY(-10px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content:hover {
+  background-color: var(--dark-blue-lighter);
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hours h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.hours p {
+  font-size: 0.7rem;
+  color: var(--desaturated-blue);
+}
+
+.card3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.card4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.card5 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.card6 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.card7 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .top h1 {
+    font-size: 1.5rem;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content {
+    gap: 5px;
+  }
+
+  .title h2 {
+    font-size: 1rem;
+  }
+
+  .title p {
+    font-size: 1.5rem;
+  }
+
+  .hours {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hours h1 {
+    font-size: 1.8rem;
+  }
+
+  .hours p {
+    font-size: 1rem;
+  }
+}
